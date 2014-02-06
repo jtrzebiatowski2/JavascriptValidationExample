@@ -1,6 +1,30 @@
 //This tells the window to wait for everything to load before starting to run the javascript
 $(init);
-
+//Checkout form validation rules
+    var checkoutRules=
+	{
+		firstName:				
+		{
+			required: true,
+		},
+		lastName:
+		{
+			required: true,				
+		},
+		street:
+		{
+			required: true,				
+		},
+		city:
+		{
+			required: true,				
+		},
+		cardNum:
+		{
+			required: true,			
+			digits: true,
+		}
+	};
 //Checkout form validation messages 
 	var checkoutMessages = 
 	{
@@ -27,7 +51,7 @@ $(init);
 		}
 	};
 	
-//Checkout Event in defined here
+//Checkout Event is defined here
 	var checkoutEvent =
 	{
 		submitHandler: processPayment,	
